@@ -5,7 +5,7 @@ import { getFileUrl } from './get-file-url';
 describe('getFileUrl', () => {
 	it('should create a file url', () => {
 		expect(getFileUrl('bookmarks', '123', 'test.jpg')).toContain(
-			'/api/files/bookmarks/123/test.jpg'
+			'/internal/files/bookmarks/123/test.jpg'
 		);
 	});
 });

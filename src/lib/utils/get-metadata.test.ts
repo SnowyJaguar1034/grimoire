@@ -9,7 +9,7 @@ describe('getMetadata', () => {
 		expect(metadata).toMatchObject({
 			url: 'https://example.com',
 			title: 'Example Domain',
-			description: '',
+			description: 'More information... [https://www.iana.org/domains/example]',
 			author: '',
 			content_html: '',
 			content_published_date: '',
