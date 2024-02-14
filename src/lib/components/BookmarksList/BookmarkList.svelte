@@ -12,13 +12,13 @@
 {#if $user.isValid}
 	{#if $page.data.bookmarks.length > 0}
 		{#if $userSettingsStore.bookmarksView === 'grid'}
-			<div class="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
+			<div class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
 				{#each bookmarks as bookmark (bookmark.id)}
 					<BookmarkCard {bookmark} />
 				{/each}
 			</div>
 		{:else if $userSettingsStore.bookmarksView === 'list'}
-			<div class="flex flex-col w-full gap-2">
+			<div class="flex w-full flex-col gap-2">
 				{#each bookmarks as bookmark (bookmark.id)}
 					<BookmarkListItem {bookmark} />
 				{/each}

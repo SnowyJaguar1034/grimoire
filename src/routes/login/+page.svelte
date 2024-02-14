@@ -10,7 +10,7 @@
 		<span> Incorrect credentials. </span>
 	</div>
 {/if}
-<div class="w-full mt-24">
+<div class="mt-24 w-full">
 	<form method="POST">
 		<div class="form-control mx-auto max-w-xs gap-4">
 			<div>

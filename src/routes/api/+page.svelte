@@ -16,4 +16,4 @@
 	<title>Grimoire - SwaggerUI</title>
 </svelte:head>
 
-<div id="swagger-ui-container" class="bg-gray-50 w-full rounded-lg" />
+<div id="swagger-ui-container" class="w-full rounded-lg bg-gray-50" />

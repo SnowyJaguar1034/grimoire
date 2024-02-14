@@ -26,14 +26,14 @@
 	const limitOptions = [10, 20, 50, 100];
 </script>
 
-<div class={`flex gap-2 mt-8 ${getMarginPosition()}`}>
+<div class={`mt-8 flex gap-2 ${getMarginPosition()}`}>
 	<div class="tooltip" data-tip="Select page">
 		<div class="join">
 			{#if pagesCount > 0}
 				{#each Array(pagesCount) as _, i}
 					<button
 						title={`Go to page ${i + 1}`}
-						class={`join-item btn btn-md ${page === i + 1 ? 'btn-active' : ''}`}
+						class={`btn join-item btn-md ${page === i + 1 ? 'btn-active' : ''}`}
 						on:click={() => {
 							page = i + 1;
 							handlePageChange();

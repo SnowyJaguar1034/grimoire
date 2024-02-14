@@ -28,9 +28,9 @@
 		<button
 			type="button"
 			on:click={closeModal}
-			class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button
+			class="btn btn-circle btn-ghost btn-sm absolute right-2 top-2">✕</button
 		>
-		<h2 class="font-bold text-lg mb-4">Edit bookmark</h2>
+		<h2 class="mb-4 text-lg font-bold">Edit bookmark</h2>
 		<EditBookmarkForm {closeModal} />
 	</form>
 	<!-- <form method="dialog" class="modal-backdrop"> -->

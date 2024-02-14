@@ -11,7 +11,7 @@
 		<span> Incorrect credentials. </span>
 	</div>
 {/if}
-<div class="flex flex-col w-full mt-16 gap-20">
+<div class="mt-16 flex w-full flex-col gap-20">
 	<div class="flex justify-center"><h1 class="text-2xl">Admin Login</h1></div>
 
 	<form method="POST">

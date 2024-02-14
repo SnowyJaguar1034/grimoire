@@ -10,7 +10,7 @@
 		<div class="flex items-center">
 			{#if !category.icon}
 				<div
-					class="w-4 h-4 my-auto rounded-full"
+					class="my-auto h-4 w-4 rounded-full"
 					style={`background-color: ${category?.color || '#a0a0a0'};`}
 				/>
 			{:else}
@@ -23,10 +23,10 @@
 
 		{#if category.children}
 			{#each category.children as categoryChild (categoryChild.id)}
-				<div class="flex items-center ml-4">
+				<div class="ml-4 flex items-center">
 					{#if !categoryChild.icon}
 						<div
-							class="w-4 h-4 my-auto rounded-full"
+							class="my-auto h-4 w-4 rounded-full"
 							style={`background-color: ${categoryChild?.color || '#a0a0a0'};`}
 						/>
 					{:else}

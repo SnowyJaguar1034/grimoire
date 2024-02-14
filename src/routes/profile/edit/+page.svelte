@@ -30,7 +30,7 @@
 				</label>
 				<input
 					type="text"
-					class="input input-secondary input-bordered w-full"
+					class="input input-bordered input-secondary w-full"
 					name="name"
 					value={$user.model?.name}
 				/>
@@ -41,7 +41,7 @@
 				</label>
 				<input
 					type="text"
-					class="input input-secondary input-bordered w-full"
+					class="input input-bordered input-secondary w-full"
 					name="username"
 					value={$user.model?.username}
 					required
@@ -53,7 +53,7 @@
 				</label>
 				<input
 					type="text"
-					class="input input-secondary input-bordered w-full"
+					class="input input-bordered input-secondary w-full"
 					name="email"
 					value={$user.model?.email}
 					placeholder="none"
@@ -76,7 +76,7 @@
 					</label>
 					<input
 						type="password"
-						class="input input-secondary input-bordered w-full"
+						class="input input-bordered input-secondary w-full"
 						name="current_password"
 						placeholder="Password"
 					/>
@@ -87,7 +87,7 @@
 					</label>
 					<input
 						type="password"
-						class="input input-secondary input-bordered w-full"
+						class="input input-bordered input-secondary w-full"
 						name="new_password"
 						placeholder="New password"
 					/>
@@ -98,7 +98,7 @@
 					</label>
 					<input
 						type="password"
-						class="input input-secondary input-bordered w-full"
+						class="input input-bordered input-secondary w-full"
 						name="new_password_repeat"
 						placeholder="Repeat new password"
 					/>

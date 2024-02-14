@@ -24,7 +24,7 @@
 		return async () => {};
 	}}
 >
-	<label class="swap swap-rotate btn btn-sm btn-circle">
+	<label class="btn btn-circle swap swap-rotate btn-sm">
 		<input
 			id="theme"
 			name="theme"

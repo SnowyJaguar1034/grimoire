@@ -5,9 +5,9 @@
 	export let form: HTMLFormElement;
 </script>
 
-<div class="w-full mt-24">
+<div class="mt-24 w-full">
 	{#if $page.data.signupDisabled}
-		<div class="flex flex-col items-center justify-center gap-4 p-4 mx-auto">
+		<div class="mx-auto flex flex-col items-center justify-center gap-4 p-4">
 			<h1 class="text-2xl font-bold">Sign up</h1>
 			<p class="text-gray-500">
 				Sign up is currently disabled. Please contact the administrator if you want to sign up.

@@ -29,8 +29,8 @@
 	$: $bookmarkTagsInput = $bookmark.tags?.map((t) => ({ value: t.id, label: t.name })) || null;
 </script>
 
-<div class="flex flex-col gap-8 max-w-5xl">
-	<button class="btn btn-sm btn-link absolute right-8 top-8" on:click={onEditBookmark} tabindex="0"
+<div class="flex max-w-5xl flex-col gap-8">
+	<button class="btn btn-link btn-sm absolute right-8 top-8" on:click={onEditBookmark} tabindex="0"
 		>Edit</button
 	>
 	<div class="flex justify-between gap-2">
@@ -38,14 +38,14 @@
 			{$bookmark.title}
 		</h1>
 	</div>
-	<div class="flex flex-col lg:flex-row gap-4">
+	<div class="flex flex-col gap-4 lg:flex-row">
 		{#if $bookmark?.id}
 			<div class="flex flex-col gap-2">
-				<div class="flex flex-col md:flex-row gap-2">
-					<div class="flex flex-col flex-1 gap-2 min-w-fit">
-						<div class="flex gap-2 items-center">
+				<div class="flex flex-col gap-2 md:flex-row">
+					<div class="flex min-w-fit flex-1 flex-col gap-2">
+						<div class="flex items-center gap-2">
 							{#if $bookmark.icon || $bookmark.icon_url}
-								<img src={$bookmark.icon || $bookmark.icon_url} alt="Icon" class="w-8 h-8" />
+								<img src={$bookmark.icon || $bookmark.icon_url} alt="Icon" class="h-8 w-8" />
 							{/if}
 							<p class="badge badge-ghost">{$bookmark.domain}</p>
 						</div>
@@ -54,13 +54,13 @@
 								<img
 									src={$bookmark.main_image || $bookmark.main_image_url}
 									alt="Main"
-									class="rounded-md max-w-[70vw] md:max-w-sm"
+									class="max-w-[70vw] rounded-md md:max-w-sm"
 								/>
 							{/if}
 						</div>
 						<div>
 							<h3 class="text-xl">Tags</h3>
-							<div class="flex flex-wrap gap-2 m-1">
+							<div class="m-1 flex flex-wrap gap-2">
 								{#if $bookmark.tags?.length}
 									{#each $bookmark.tags as tag (tag.id)}
 										<span class="badge badge-outline badge-sm whitespace-nowrap">{tag.name}</span>
@@ -85,7 +85,7 @@
 									<input
 										type="radio"
 										name="importance"
-										class="mask mask-star-2 bg-orange-400 cursor-default"
+										class="mask mask-star-2 cursor-default bg-orange-400"
 										checked={$bookmark.importance === 1}
 										value="1"
 										disabled
@@ -93,7 +93,7 @@
 									<input
 										type="radio"
 										name="importance"
-										class="mask mask-star-2 bg-orange-400 cursor-default"
+										class="mask mask-star-2 cursor-default bg-orange-400"
 										checked={$bookmark.importance === 2}
 										value="2"
 										disabled
@@ -101,7 +101,7 @@
 									<input
 										type="radio"
 										name="importance"
-										class="mask mask-star-2 bg-orange-400 cursor-default"
+										class="mask mask-star-2 cursor-default bg-orange-400"
 										checked={$bookmark.importance === 3}
 										value="3"
 										disabled
@@ -162,7 +162,7 @@
 
 				<div>
 					<h3 class="text-xl">Description</h3>
-					<p class="break-words lg:max-w-xl max-w-xs">
+					<p class="max-w-xs break-words lg:max-w-xl">
 						{$bookmark.description}
 					</p>
 				</div>
@@ -183,7 +183,7 @@
 					{/if}
 				</div>
 			</div>
-			<div class="flex flex-col gap-4 min-w-[20rem] w-full">
+			<div class="flex w-full min-w-[20rem] flex-col gap-4">
 				<h3 class="text-xl">Content</h3>
 				<div class="flex flex-col">
 					<div class="tabs tabs-bordered min-w-full">
@@ -207,7 +207,7 @@
 						</div>
 					</div>
 					<div
-						class={`flex flex-col overflow-y-scroll pt-1 pl-1 w-full border border-t-0 border-gray-500 rounded-b-sm ${
+						class={`flex w-full flex-col overflow-y-scroll rounded-b-sm border border-t-0 border-gray-500 pl-1 pt-1 ${
 							$bookmark.content_html || $bookmark.content_text ? 'h-60 ' : 'justify-items-center   '
 						}`}
 					>
@@ -223,7 +223,7 @@
 
 				<div>
 					<h3 class="text-xl">Note</h3>
-					<p class={`overflow-y-scroll ${$bookmark.note ? 'h-14' : 'text-gray-500 m-2 '}`}>
+					<p class={`overflow-y-scroll ${$bookmark.note ? 'h-14' : 'm-2 text-gray-500 '}`}>
 						{#if $bookmark.note}
 							{$bookmark.note}
 						{:else}

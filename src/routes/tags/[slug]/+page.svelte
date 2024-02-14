@@ -17,7 +17,7 @@
 	}
 </script>
 
-<div class="flex flex-col gap-8 w-full">
+<div class="flex w-full flex-col gap-8">
 	<h1 class="text-2xl">Tag: {tag?.name}</h1>
 
 	<EditBookmarkModal />

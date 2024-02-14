@@ -24,8 +24,8 @@
 	};
 </script>
 
-<footer class="footer items-center p-4 bg-neutral text-neutral-content">
-	<aside class="items-center grid-flow-col">
+<footer class="footer items-center bg-neutral p-4 text-neutral-content">
+	<aside class="grid-flow-col items-center">
 		<p>
 			<span class="font-bold">Grimoire</span>, open source
 			<span
@@ -48,12 +48,12 @@
 		<span class=" text-neutral-content">
 			version: {version}
 		</span>
-		<a href="/about" target="_self" title="About page" class="link link-hover"> about </a>
+		<a href="/about" target="_self" title="About page" class="link-hover link"> about </a>
 		<a
 			href="https://grimoire.pro/"
 			target="_blank"
 			title="Grimoire.pro website"
-			class="link link-hover"
+			class="link-hover link"
 		>
 			grimoire.pro
 		</a>
